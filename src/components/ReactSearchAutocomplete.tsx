@@ -125,9 +125,9 @@ export default function ReactSearchAutocomplete<T>({
   }, [])
 
   const handleOnFocus = (event: FocusEvent<HTMLInputElement>) => {
+    console.log(`keyword ====> ${event.target.value}`);
     onFocus(event)
     setHasFocus(true)
-    handleSetSearchString(event);
   }
 
   const callOnSearch = (keyword: string) => {
